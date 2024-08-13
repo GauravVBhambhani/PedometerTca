@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+import CoreMotion
 
 @main
 struct PedometerTcaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PedometerView(
+                store: Store(initialState: PedometerFeature.State()) {
+                    PedometerFeature()
+                }
+            )
         }
     }
 }

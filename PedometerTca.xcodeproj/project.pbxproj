@@ -11,7 +11,21 @@
 		106AC26C2C4DE5AC00F5EAEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC26B2C4DE5AC00F5EAEA /* ContentView.swift */; };
 		106AC26E2C4DE5AD00F5EAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106AC26D2C4DE5AD00F5EAEA /* Assets.xcassets */; };
 		106AC2712C4DE5AD00F5EAEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106AC2702C4DE5AD00F5EAEA /* Preview Assets.xcassets */; };
+		106AC2862C4DE95400F5EAEA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 106AC2852C4DE95400F5EAEA /* ComposableArchitecture */; };
+		106AC28A2C4DF62B00F5EAEA /* PedometerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC2892C4DF62B00F5EAEA /* PedometerFeature.swift */; };
+		10EB356A2C59B4C80059A8D8 /* PedometerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB35692C59B4C80059A8D8 /* PedometerClient.swift */; };
+		10FB60DB2C63079600F4D3D6 /* PedometerTcaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB60DA2C63079600F4D3D6 /* PedometerTcaTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10FB60DC2C63079600F4D3D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 106AC25E2C4DE5AC00F5EAEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 106AC2652C4DE5AC00F5EAEA;
+			remoteInfo = PedometerTca;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		106AC2662C4DE5AC00F5EAEA /* PedometerTca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedometerTca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +33,22 @@
 		106AC26B2C4DE5AC00F5EAEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		106AC26D2C4DE5AD00F5EAEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		106AC2702C4DE5AD00F5EAEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		106AC2892C4DF62B00F5EAEA /* PedometerFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerFeature.swift; sourceTree = "<group>"; };
+		10EB35692C59B4C80059A8D8 /* PedometerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerClient.swift; sourceTree = "<group>"; };
+		10FB60D82C63079600F4D3D6 /* PedometerTcaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PedometerTcaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10FB60DA2C63079600F4D3D6 /* PedometerTcaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerTcaTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		106AC2632C4DE5AC00F5EAEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106AC2862C4DE95400F5EAEA /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10FB60D52C63079600F4D3D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,11 +58,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105083172C6507D3009D8840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		105083462C6BED82009D8840 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				106AC2892C4DF62B00F5EAEA /* PedometerFeature.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		105083472C6BEDBB009D8840 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				10EB35692C59B4C80059A8D8 /* PedometerClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		105083482C6BEDDB009D8840 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				106AC26B2C4DE5AC00F5EAEA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		106AC25D2C4DE5AC00F5EAEA = {
 			isa = PBXGroup;
 			children = (
 				106AC2682C4DE5AC00F5EAEA /* PedometerTca */,
+				10FB60D92C63079600F4D3D6 /* PedometerTcaTests */,
 				106AC2672C4DE5AC00F5EAEA /* Products */,
+				105083172C6507D3009D8840 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				106AC2662C4DE5AC00F5EAEA /* PedometerTca.app */,
+				10FB60D82C63079600F4D3D6 /* PedometerTcaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +111,12 @@
 		106AC2682C4DE5AC00F5EAEA /* PedometerTca */ = {
 			isa = PBXGroup;
 			children = (
-				106AC2692C4DE5AC00F5EAEA /* PedometerTcaApp.swift */,
-				106AC26B2C4DE5AC00F5EAEA /* ContentView.swift */,
-				106AC26D2C4DE5AD00F5EAEA /* Assets.xcassets */,
 				106AC26F2C4DE5AD00F5EAEA /* Preview Content */,
+				106AC26D2C4DE5AD00F5EAEA /* Assets.xcassets */,
+				106AC2692C4DE5AC00F5EAEA /* PedometerTcaApp.swift */,
+				105083462C6BED82009D8840 /* Reducer */,
+				105083472C6BEDBB009D8840 /* Client */,
+				105083482C6BEDDB009D8840 /* View */,
 			);
 			path = PedometerTca;
 			sourceTree = "<group>";
@@ -65,6 +127,14 @@
 				106AC2702C4DE5AD00F5EAEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10FB60D92C63079600F4D3D6 /* PedometerTcaTests */ = {
+			isa = PBXGroup;
+			children = (
+				10FB60DA2C63079600F4D3D6 /* PedometerTcaTests.swift */,
+			);
+			path = PedometerTcaTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +153,32 @@
 			dependencies = (
 			);
 			name = PedometerTca;
+			packageProductDependencies = (
+				106AC2852C4DE95400F5EAEA /* ComposableArchitecture */,
+			);
 			productName = PedometerTca;
 			productReference = 106AC2662C4DE5AC00F5EAEA /* PedometerTca.app */;
 			productType = "com.apple.product-type.application";
+		};
+		10FB60D72C63079600F4D3D6 /* PedometerTcaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10FB60E02C63079600F4D3D6 /* Build configuration list for PBXNativeTarget "PedometerTcaTests" */;
+			buildPhases = (
+				10FB60D42C63079600F4D3D6 /* Sources */,
+				10FB60D52C63079600F4D3D6 /* Frameworks */,
+				10FB60D62C63079600F4D3D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10FB60DD2C63079600F4D3D6 /* PBXTargetDependency */,
+			);
+			name = PedometerTcaTests;
+			packageProductDependencies = (
+			);
+			productName = PedometerTcaTests;
+			productReference = 10FB60D82C63079600F4D3D6 /* PedometerTcaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +193,10 @@
 					106AC2652C4DE5AC00F5EAEA = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					10FB60D72C63079600F4D3D6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 106AC2652C4DE5AC00F5EAEA;
+					};
 				};
 			};
 			buildConfigurationList = 106AC2612C4DE5AC00F5EAEA /* Build configuration list for PBXProject "PedometerTca" */;
@@ -111,11 +208,15 @@
 				Base,
 			);
 			mainGroup = 106AC25D2C4DE5AC00F5EAEA;
+			packageReferences = (
+				106AC2842C4DE95400F5EAEA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 106AC2672C4DE5AC00F5EAEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				106AC2652C4DE5AC00F5EAEA /* PedometerTca */,
+				10FB60D72C63079600F4D3D6 /* PedometerTcaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +231,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10FB60D62C63079600F4D3D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +245,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EB356A2C59B4C80059A8D8 /* PedometerClient.swift in Sources */,
+				106AC28A2C4DF62B00F5EAEA /* PedometerFeature.swift in Sources */,
 				106AC26C2C4DE5AC00F5EAEA /* ContentView.swift in Sources */,
 				106AC26A2C4DE5AC00F5EAEA /* PedometerTcaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10FB60D42C63079600F4D3D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FB60DB2C63079600F4D3D6 /* PedometerTcaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10FB60DD2C63079600F4D3D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 106AC2652C4DE5AC00F5EAEA /* PedometerTca */;
+			targetProxy = 10FB60DC2C63079600F4D3D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		106AC2722C4DE5AD00F5EAEA /* Debug */ = {
@@ -275,6 +401,7 @@
 				DEVELOPMENT_TEAM = 73923FA922;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "need motion :)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +431,7 @@
 				DEVELOPMENT_TEAM = 73923FA922;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "need motion :)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +447,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10FB60DE2C63079600F4D3D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73923FA922;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.gaurav.PedometerTcaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PedometerTca.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PedometerTca";
+			};
+			name = Debug;
+		};
+		10FB60DF2C63079600F4D3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73923FA922;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.gaurav.PedometerTcaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PedometerTca.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PedometerTca";
 			};
 			name = Release;
 		};
@@ -343,7 +507,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		10FB60E02C63079600F4D3D6 /* Build configuration list for PBXNativeTarget "PedometerTcaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10FB60DE2C63079600F4D3D6 /* Debug */,
+				10FB60DF2C63079600F4D3D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		106AC2842C4DE95400F5EAEA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		106AC2852C4DE95400F5EAEA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 106AC2842C4DE95400F5EAEA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 106AC25E2C4DE5AC00F5EAEA /* Project object */;
 }
